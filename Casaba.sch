@@ -1,0 +1,299 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L Device:Rotary_Encoder_Switch J1
+U 1 1 5F8BFEFA
+P 1000 1100
+F 0 "J1" V 1400 1100 50  0000 C CNN
+F 1 "Rotary_Encoder_Switch" V 1500 1100 50  0000 C CNN
+F 2 "Rotary_Encoder:RotaryEncoder_Alps_EC11E-Switch_Vertical_H20mm" H 850 1260 50  0001 C CNN
+F 3 "~" H 1000 1360 50  0001 C CNN
+	1    1000 1100
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Connector_Generic:Conn_01x05 J3
+U 1 1 5F8C203F
+P 2850 1150
+F 0 "J3" H 2930 1192 50  0000 L CNN
+F 1 "Ribbon" H 2930 1101 50  0000 L CNN
+F 2 "Connector_PinHeader_1.27mm:PinHeader_1x05_P1.27mm_Vertical" H 2850 1150 50  0001 C CNN
+F 3 "~" H 2850 1150 50  0001 C CNN
+	1    2850 1150
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:VDD #PWR0101
+U 1 1 5F8C3B56
+P 2650 950
+F 0 "#PWR0101" H 2650 800 50  0001 C CNN
+F 1 "VDD" H 2665 1123 50  0000 C CNN
+F 2 "" H 2650 950 50  0001 C CNN
+F 3 "" H 2650 950 50  0001 C CNN
+	1    2650 950 
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0102
+U 1 1 5F8C46DC
+P 1000 1600
+F 0 "#PWR0102" H 1000 1350 50  0001 C CNN
+F 1 "GND" H 1005 1427 50  0000 C CNN
+F 2 "" H 1000 1600 50  0001 C CNN
+F 3 "" H 1000 1600 50  0001 C CNN
+	1    1000 1600
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0103
+U 1 1 5F8C9559
+P 2450 850
+F 0 "#PWR0103" H 2450 600 50  0001 C CNN
+F 1 "GND" H 2455 677 50  0000 C CNN
+F 2 "" H 2450 850 50  0001 C CNN
+F 3 "" H 2450 850 50  0001 C CNN
+	1    2450 850 
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2550 1050 2550 850 
+Wire Wire Line
+	2550 850  2450 850 
+Wire Wire Line
+	2550 1050 2650 1050
+Text GLabel 2650 1250 0    50   Input ~ 0
+SDIO
+Text GLabel 2650 1350 0    50   Input ~ 0
+SCLK
+Text GLabel 2650 1150 0    50   Input ~ 0
+MOT
+NoConn ~ 900  800 
+NoConn ~ 1100 800 
+$Comp
+L Connector_Generic:Conn_01x05 J2
+U 1 1 5F8D0FB3
+P 1800 1150
+F 0 "J2" H 2050 1100 50  0000 C CNN
+F 1 "Breakout" H 2050 1200 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x05_P2.54mm_Vertical" H 1800 1150 50  0001 C CNN
+F 3 "~" H 1800 1150 50  0001 C CNN
+	1    1800 1150
+	1    0    0    1   
+$EndComp
+$Comp
+L power:GND #PWR0104
+U 1 1 5F8D709F
+P 1600 1350
+F 0 "#PWR0104" H 1600 1100 50  0001 C CNN
+F 1 "GND" H 1605 1177 50  0000 C CNN
+F 2 "" H 1600 1350 50  0001 C CNN
+F 3 "" H 1600 1350 50  0001 C CNN
+	1    1600 1350
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1600 1250 1500 1250
+Wire Wire Line
+	1500 1250 1500 1450
+Wire Wire Line
+	1500 1450 1400 1450
+Text GLabel 1600 1150 0    50   Input ~ 0
+SCLK_H
+$Comp
+L power:VCC #PWR0105
+U 1 1 5F8D8EE3
+P 1400 1450
+F 0 "#PWR0105" H 1400 1300 50  0001 C CNN
+F 1 "VCC" H 1415 1623 50  0000 C CNN
+F 2 "" H 1400 1450 50  0001 C CNN
+F 3 "" H 1400 1450 50  0001 C CNN
+	1    1400 1450
+	1    0    0    -1  
+$EndComp
+$Comp
+L Regulator_Linear:TPS76327 U1
+U 1 1 5F8DA945
+P 1450 2250
+F 0 "U1" H 1450 2592 50  0000 C CNN
+F 1 "2.7v" H 1450 2501 50  0000 C CNN
+F 2 "Package_TO_SOT_SMD:SOT-23-5" H 1450 2575 50  0001 C CIN
+F 3 "http://www.ti.com/lit/ds/symlink/tps763.pdf" H 1450 2250 50  0001 C CNN
+	1    1450 2250
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small C2
+U 1 1 5F8DBEC7
+P 1850 2350
+F 0 "C2" H 1942 2396 50  0000 L CNN
+F 1 "1uF" H 1942 2305 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 1850 2350 50  0001 C CNN
+F 3 "~" H 1850 2350 50  0001 C CNN
+	1    1850 2350
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small C1
+U 1 1 5F8DCDBA
+P 1050 2350
+F 0 "C1" H 1300 2400 50  0000 R CNN
+F 1 "1uF" H 1300 2300 50  0000 R CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 1050 2350 50  0001 C CNN
+F 3 "~" H 1050 2350 50  0001 C CNN
+	1    1050 2350
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	1750 2150 1850 2150
+Wire Wire Line
+	1850 2150 1850 2250
+$Comp
+L power:VDD #PWR0106
+U 1 1 5F8DF02B
+P 1850 2150
+F 0 "#PWR0106" H 1850 2000 50  0001 C CNN
+F 1 "VDD" H 1865 2323 50  0000 C CNN
+F 2 "" H 1850 2150 50  0001 C CNN
+F 3 "" H 1850 2150 50  0001 C CNN
+	1    1850 2150
+	1    0    0    -1  
+$EndComp
+Connection ~ 1850 2150
+Wire Wire Line
+	1150 2150 1050 2150
+Wire Wire Line
+	1050 2150 1050 2250
+Wire Wire Line
+	1150 2250 1050 2250
+Connection ~ 1050 2250
+$Comp
+L power:VCC #PWR0107
+U 1 1 5F8E2648
+P 1050 2150
+F 0 "#PWR0107" H 1050 2000 50  0001 C CNN
+F 1 "VCC" H 1065 2323 50  0000 C CNN
+F 2 "" H 1050 2150 50  0001 C CNN
+F 3 "" H 1050 2150 50  0001 C CNN
+	1    1050 2150
+	1    0    0    -1  
+$EndComp
+Connection ~ 1050 2150
+$Comp
+L power:GND #PWR0108
+U 1 1 5F8E2CC9
+P 1450 2550
+F 0 "#PWR0108" H 1450 2300 50  0001 C CNN
+F 1 "GND" H 1455 2377 50  0000 C CNN
+F 2 "" H 1450 2550 50  0001 C CNN
+F 3 "" H 1450 2550 50  0001 C CNN
+	1    1450 2550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1450 2550 1050 2550
+Wire Wire Line
+	1050 2550 1050 2450
+Connection ~ 1450 2550
+Wire Wire Line
+	1450 2550 1850 2550
+Wire Wire Line
+	1850 2550 1850 2450
+$Comp
+L power:VCC #PWR0109
+U 1 1 5F8E7D8D
+P 3050 1800
+F 0 "#PWR0109" H 3050 1650 50  0001 C CNN
+F 1 "VCC" H 3065 1973 50  0000 C CNN
+F 2 "" H 3050 1800 50  0001 C CNN
+F 3 "" H 3050 1800 50  0001 C CNN
+	1    3050 1800
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:VDD #PWR0110
+U 1 1 5F8E8837
+P 2850 1800
+F 0 "#PWR0110" H 2850 1650 50  0001 C CNN
+F 1 "VDD" H 2865 1973 50  0000 C CNN
+F 2 "" H 2850 1800 50  0001 C CNN
+F 3 "" H 2850 1800 50  0001 C CNN
+	1    2850 1800
+	1    0    0    -1  
+$EndComp
+NoConn ~ 1600 950 
+Text GLabel 3350 2400 2    50   Input ~ 0
+SCLK_H
+Text GLabel 3350 2200 2    50   Input ~ 0
+SDIO_H
+Text GLabel 2550 2200 0    50   Input ~ 0
+SDIO
+Text GLabel 2550 2400 0    50   Input ~ 0
+SCLK
+$Comp
+L power:GND #PWR0111
+U 1 1 5F8ED324
+P 2950 2800
+F 0 "#PWR0111" H 2950 2550 50  0001 C CNN
+F 1 "GND" H 2955 2627 50  0000 C CNN
+F 2 "" H 2950 2800 50  0001 C CNN
+F 3 "" H 2950 2800 50  0001 C CNN
+	1    2950 2800
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R_Small R1
+U 1 1 5F8EB9A7
+P 2450 2600
+F 0 "R1" V 2350 2550 50  0000 L CNN
+F 1 "10k" V 2250 2550 50  0000 L CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" H 2450 2600 50  0001 C CNN
+F 3 "~" H 2450 2600 50  0001 C CNN
+	1    2450 2600
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Logic_LevelTranslator:TXB0102DCU U2
+U 1 1 5F8E6BAB
+P 2950 2300
+F 0 "U2" H 3450 2700 50  0000 C CNN
+F 1 "TXB0102DCU" H 3450 2800 50  0000 C CNN
+F 2 "Package_SO:VSSOP-8_2.4x2.1mm_P0.5mm" H 2950 1750 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/txb0102.pdf" H 2950 2270 50  0001 C CNN
+	1    2950 2300
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:VDD #PWR0112
+U 1 1 5F8EF437
+P 2150 2600
+F 0 "#PWR0112" H 2150 2450 50  0001 C CNN
+F 1 "VDD" H 2165 2773 50  0000 C CNN
+F 2 "" H 2150 2600 50  0001 C CNN
+F 3 "" H 2150 2600 50  0001 C CNN
+	1    2150 2600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2150 2600 2350 2600
+Text GLabel 1100 1400 3    50   Input ~ 0
+SCLK_H
+Text GLabel 1600 1050 0    50   Input ~ 0
+SDIO_H
+Text GLabel 900  1400 3    50   Input ~ 0
+SDIO_H
+Wire Wire Line
+	1000 1400 1000 1600
+$EndSCHEMATC
