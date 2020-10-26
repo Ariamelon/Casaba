@@ -1,0 +1,4 @@
+(sym_lib_table
+  (version 7)
+  (lib (name "Casaba")(type "KiCad")(uri "${KIPRJMOD}/Casaba.kicad_sym")(options "")(descr ""))
+)
